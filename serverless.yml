@@ -1,0 +1,10 @@
+org: irtiza07
+app: highlights-frontend-serverless
+name: highlights-frontend-serverless
+component: website
+
+inputs:
+  src:
+    src: ./src
+    hook: npm run build
+    dist: ./dist
