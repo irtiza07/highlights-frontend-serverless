@@ -3,6 +3,8 @@ import React from "react";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 
+import fire from "./utils/fire";
+
 export default function TopMenu() {
   const onSignOut = () => {
     fire

@@ -10,7 +10,12 @@ export default function Dashboard({ highlights, tags }) {
   return (
     <Box display="flex" flexDirection="column">
       <TopMenu></TopMenu>
-      <Box display="flex" flexDirection="row">
+      <Box
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+        padding="3vw"
+      >
         <Tags tags={tags}></Tags>
         <Highlights highlights={highlights}></Highlights>
       </Box>
