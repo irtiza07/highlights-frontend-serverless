@@ -121341,9 +121341,9 @@ function App() {
     fetch("https://iu8i1yjyu0.execute-api.us-east-1.amazonaws.com/users/".concat(user.userId)).then(function (response) {
       return response.json();
     }).then(function (data) {
-      setTags(data[0]["tags"]);
-      setHighlights(data[0]["highlights"]);
       console.log(data);
+      setTags(data["tags"]);
+      setHighlights(data["highlights"]);
     });
   }, [user]);
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -121404,7 +121404,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64421" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51442" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
