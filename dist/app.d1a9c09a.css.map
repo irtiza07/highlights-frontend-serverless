@@ -1,1 +1,0 @@
-{"version":3,"sources":["app.css"],"names":[],"mappings":"AAAA,KACE,iBAAkB,CAClB,wBAAgC,CAChC,YACF","file":"app.d1a9c09a.css","sourceRoot":"..","sourcesContent":[".App {\n  text-align: center;\n  background-color: blanchedalmond;\n  height: 100vh;\n}\n"]}

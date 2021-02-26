@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import SplashScreen from "./SplashScreen";
 import Dashboard from "./Dashboard";
@@ -8,9 +8,27 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState(null);
 
+  const [tags, setTags] = useState([]);
+  const [highlights, setHighlights] = useState([]);
+
+  useEffect(() => {
+    if (!user) {
+      return;
+    }
+    fetch(
+      `https://iu8i1yjyu0.execute-api.us-east-1.amazonaws.com/users/${user.userId}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setTags(data[0]["tags"]);
+        setHighlights(data[0]["highlights"]);
+        console.log(data);
+      });
+  }, [user]);
+
   return (
     <div className="App">
-      {isLoggedIn && <Dashboard />}
+      {isLoggedIn && user && <Dashboard highlights={highlights} tags={tags} />}
 
       {!isLoggedIn && (
         <SplashScreen
