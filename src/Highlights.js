@@ -5,14 +5,16 @@ import Box from "@material-ui/core/Box";
 
 import IndividualHighlight from "./IndividualHighlight";
 
-export default function Tags({ highlights }) {
+export default function Tags({ highlights, activeFilter }) {
   const listHighlights = highlights.map((highlight, index) => {
-    return (
-      <IndividualHighlight
-        key={index}
-        highlight={highlight}
-      ></IndividualHighlight>
-    );
+    if (activeFilter === "all" || highlight.tag === activeFilter) {
+      return (
+        <IndividualHighlight
+          key={index}
+          highlight={highlight}
+        ></IndividualHighlight>
+      );
+    }
   });
   if (highlights.length == 0) {
     return null;

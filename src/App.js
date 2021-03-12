@@ -22,7 +22,6 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         setTags(data["tags"]);
         setHighlights(data["highlights"]);
       });

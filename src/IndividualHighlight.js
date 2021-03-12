@@ -14,13 +14,13 @@ export default function IndividualHighlight({ highlight }) {
     <Grid item xs={3}>
       <Card style={{ width: "20vw", margin: "2vw" }}>
         <CardActionArea>
-          <CardMedia
+          {/* <CardMedia
             component="img"
             alt="Contemplative Reptile"
             height="140"
             image={highlight.sourcePicture}
             title={highlight.sourceTitle}
-          />
+          /> */}
           <CardContent style={{ height: "25vw" }}>
             <Typography gutterBottom variant="h5" component="h2">
               {highlight.sourceTitle}
